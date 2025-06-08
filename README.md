@@ -86,9 +86,8 @@ python 1_get_image_features.py --extensions ".jpg,.jpeg,.png,.bmp,.tiff"
 
 ```json
 {
-"image1.jpg": [0.123, -0.456, ..., 0.789],
-"image2.png": [0.234, -0.567, ..., 0.890],
-...
+"image1.jpg": [0.123, -0.456, 0.789],
+"image2.png": [0.234, -0.567, 0.890]
 }
 ```
 
@@ -207,18 +206,9 @@ Finish! Processed 1000 text concepts
 3. **Output Format**:
 
    ```json
-   // text_features.json
    {
-     "concept1": [0.123, -0.456, ..., 0.789],
-     "concept2": [0.234, -0.567, ..., 0.890],
-     ...
-   }
-
-   // dictionary.json
-   {
-     "concept1": [0.123, -0.456, ..., 0.789],
-     "concept2": [0.234, -0.567, ..., 0.890],
-     ...
+     "concept1": [0.123, -0.456, 0.789],
+     "concept2": [0.234, -0.567, 0.890]
    }
    ```
 
@@ -280,15 +270,12 @@ python 3_match_image_and_concept.py --device "cpu"
 {
   "image1.jpg": {
     "dictionary1": "concept_a",
-    "dictionary2": "concept_b",
-    ...
+    "dictionary2": "concept_b"
   },
   "image2.png": {
     "dictionary1": "concept_c",
-    "dictionary2": "concept_d",
-    ...
-  },
-  ...
+    "dictionary2": "concept_d"
+  }
 }
 ```
 
@@ -605,15 +592,12 @@ python 6_test_accuracy.py \
 {
   "parent_folder1": {
     "subfolder1": "85.25%",
-    "subfolder2": "92.10%",
-    ...
+    "subfolder2": "92.10%"
   },
   "parent_folder2": {
     "subfolder1": "78.33%",
-    "subfolder2": "89.47%",
-    ...
-  },
-  ...
+    "subfolder2": "89.47%"
+  }
 }
 ```
 
